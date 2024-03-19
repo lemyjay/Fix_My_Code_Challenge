@@ -2,13 +2,15 @@
 '''The module for defining a square class'''
 
 
-class Square:
+class Square():
     '''The square class'''
+    width = 0
+    height = 0
 
-    def __init__(self, width=0, height=0):
+    def __init__(self, *args, **kwargs):
         '''For initializing an object of the class'''
-        self.width = width
-        self.height = height
+        for key, value in kwargs.items():
+            setattr(self, key, value)
 
     def area_of_my_square(self):
         """ Area of the square """
@@ -24,6 +26,7 @@ class Square:
 
 
 if __name__ == "__main__":
+    '''Testing the class'''
     s = Square(width=12, height=9)
     print(s)
     print(s.area_of_my_square())
