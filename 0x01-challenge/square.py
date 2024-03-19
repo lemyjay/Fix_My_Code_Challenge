@@ -1,9 +1,13 @@
 #!/usr/bin/python3
-'''The module for defining a square class'''
+'''
+The module for defining a square class
+'''
 
 
 class Square():
-    '''The square class'''
+    '''
+    The square class
+    '''
     width = 0
     height = 0
 
